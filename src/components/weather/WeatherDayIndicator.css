@@ -1,0 +1,38 @@
+.weather_day_indicator{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 90px;
+	width: 73px;
+	cursor: pointer;
+}
+
+.weather_day_indicator_selected{
+	background-color: #fcfcfc;
+    border: 1px solid #e9e9e9;
+    border-radius: 1px;
+}
+
+.weather_day{
+	margin-top: 5px;
+	font-family: arial, sans-serif;
+	font-size: 13px;
+	color: #bababa ;
+}
+
+.weather_temperatures{
+	margin-bottom: 5px;
+}
+.weather_max_temperature{
+	margin-right: 5px;
+	font-family: arial, sans-serif;
+	font-size: 13px;
+	color: #878787 ;
+}
+
+.weather_min_temperature{
+	font-family: arial, sans-serif;
+	font-size: 13px;
+	color: #bababa ;
+}

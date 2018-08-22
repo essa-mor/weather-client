@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherDayIndicator test renders correctly - selected 1`] = `
+<div
+  className="weather_day_indicator weather_day_indicator_selected"
+>
+  <span
+    className="weather_day"
+  >
+    Wen
+  </span>
+  <img
+    alt=""
+    src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+  />
+  <div
+    className="weather_temperatures"
+  >
+    <span
+      className="weather_max_temperature"
+    >
+      25
+      °
+    </span>
+    <span
+      className="weather_min_temperature"
+    >
+      20
+      °
+    </span>
+  </div>
+</div>
+`;
+
+exports[`WeatherDayIndicator test renders correctly 1`] = `
+<div
+  className="weather_day_indicator"
+>
+  <span
+    className="weather_day"
+  >
+    Wen
+  </span>
+  <img
+    alt=""
+    src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+  />
+  <div
+    className="weather_temperatures"
+  >
+    <span
+      className="weather_max_temperature"
+    >
+      25
+      °
+    </span>
+    <span
+      className="weather_min_temperature"
+    >
+      20
+      °
+    </span>
+  </div>
+</div>
+`;
