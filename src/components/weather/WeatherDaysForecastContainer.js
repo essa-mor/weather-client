@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import WeatherDaysForecast from './WeatherDaysForecast';
 import { getWeatherDays } from './WeatherDaysApi';
@@ -15,8 +16,13 @@ class WeatherDaysForecastContainer extends React.Component {
 
 	render() {
 		const { data } = this.state;
-		return <WeatherDaysForecast data={data} />;
+		const { onChange } = this.props;
+		return <WeatherDaysForecast onChange={onChange} data={data} />;
 	}
 }
+
+WeatherDaysForecastContainer.propTypes ={
+	onChange: PropTypes.func
+};
 
 export default WeatherDaysForecastContainer;
