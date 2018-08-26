@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import WeatherDaysForecast from './components/weather/WeatherDaysForecast';
+import WeatherDaysForecastContainer from './components/weather/WeatherDaysForecastContainer';
 
 class App extends Component {
 	render() {
 		return (
-			<WeatherDaysForecast />
+			<WeatherDaysForecastContainer />
 		);
 	}
 }

@@ -6,7 +6,7 @@ import WeatherDayIndicator from './WeatherDayIndicator';
 describe('WeatherDayIndicator test', () => {
 	it('renders correctly', () => {
 		const tree = renderer.create(<WeatherDayIndicator
-			day="Wen"
+			day="2018-08-23 12:00:00"
 			img="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
 			maxTemperature={25}
 			minTemperature={20} />).toJSON();
@@ -16,7 +16,7 @@ describe('WeatherDayIndicator test', () => {
 	it('renders correctly - selected', () => {
 		const tree = renderer.create(<WeatherDayIndicator
 			isSelected={true}
-			day="Wen"
+			day="2018-08-24 12:00:00"
 			img="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
 			maxTemperature={25}
 			minTemperature={20} />).toJSON();

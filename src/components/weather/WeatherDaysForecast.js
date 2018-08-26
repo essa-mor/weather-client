@@ -1,52 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './WeatherDaysForecast.css';
 import WeatherDayIndicator from './WeatherDayIndicator';
 
-function WeatherDaysForecast() {
+function WeatherDaysForecast({ data }) {
+	const weatherDayIndicators = data.map(({ day, img, maxTemperature, minTemperature }) => (<WeatherDayIndicator
+		key={day}
+		day={day}
+		img={`http://openweathermap.org/img/w/${img}.png`}
+		maxTemperature={maxTemperature}
+		minTemperature={minTemperature} />));
+
 	return (<div className="weather_days_forecast">
-		<WeatherDayIndicator
-			isSelected={true}
-			day="Wed"
-			img="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
-			maxTemperature={31}
-			minTemperature={25} />
-		<WeatherDayIndicator
-			day="Wed"
-			img="https://ssl.gstatic.com/onebox/weather/48/sunny.png"
-			maxTemperature={31}
-			minTemperature={25} />
-		<WeatherDayIndicator
-			day="Wed"
-			img="https://ssl.gstatic.com/onebox/weather/48/rain.png"
-			maxTemperature={31}
-			minTemperature={25} />
-		<WeatherDayIndicator
-			day="Wed"
-			img="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-			maxTemperature={31}
-			minTemperature={25} />
-		<WeatherDayIndicator
-			day="Wed"
-			img="https://ssl.gstatic.com/onebox/weather/48/thunderstorms.png"
-			maxTemperature={31}
-			minTemperature={25} />
-		<WeatherDayIndicator
-			day="Wed"
-			img="https://ssl.gstatic.com/onebox/weather/48/sunny_s_cloudy.png"
-			maxTemperature={31}
-			minTemperature={25} />
-		<WeatherDayIndicator
-			day="Wed"
-			img="https://ssl.gstatic.com/onebox/weather/48/rain_light.png"
-			maxTemperature={31}
-			minTemperature={25} />
-		<WeatherDayIndicator
-			day="Wed"
-			img="https://ssl.gstatic.com/onebox/weather/48/sunny_s_rain.png"
-			maxTemperature={31}
-			minTemperature={25} />
+		{weatherDayIndicators}
 	</div>);
 }
+
+WeatherDaysForecast.propTypes = {
+	data: PropTypes.arrayOf(PropTypes.shape({
+		day: PropTypes.string.isRequired,
+		maxTemperature: PropTypes.number.isRequired,
+		minTemperature: PropTypes.number.isRequired,
+		img: PropTypes.string.isRequired
+	})).isRequired
+};
 
 export default WeatherDaysForecast;
