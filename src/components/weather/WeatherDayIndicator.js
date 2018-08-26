@@ -19,6 +19,7 @@ function WeatherDayIndicator({ isSelected, day, img, maxTemperature, minTemperat
 
 WeatherDayIndicator.propTypes = {
 	isSelected: PropTypes.bool,
+	dt: PropTypes.number.isRequired,
 	day: PropTypes.string.isRequired,
 	img: PropTypes.string.isRequired,
 	maxTemperature: PropTypes.number.isRequired,

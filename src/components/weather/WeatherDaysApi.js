@@ -8,10 +8,10 @@ export function getDailyWeather(data) {
 	const result = [];
 	const { list } = data;
 	for (let i = 0; i < list.length; i += 8) {
-		const { dt_txt } = list[i];
+		const { dt_txt , dt } = list[i];
 		const { temp_max, temp_min } = list[i].main;
 		const { icon } = list[i].weather[0];
-		result.push({ day: dt_txt, maxTemperature: temp_max, minTemperature: temp_min, img: icon });
+		result.push({ dt, day: dt_txt, maxTemperature: temp_max, minTemperature: temp_min, img: icon });
 	}
 	return result;
 }

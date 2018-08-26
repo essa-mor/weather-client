@@ -5,7 +5,8 @@ import './WeatherDaysForecast.css';
 import WeatherDayIndicator from './WeatherDayIndicator';
 
 function WeatherDaysForecast({ data }) {
-	const weatherDayIndicators = data.map(({ day, img, maxTemperature, minTemperature }) => (<WeatherDayIndicator
+	const weatherDayIndicators = data.map(({ dt, day, img, maxTemperature, minTemperature }) => (<WeatherDayIndicator
+		dt={dt}
 		key={day}
 		day={day}
 		img={`http://openweathermap.org/img/w/${img}.png`}
@@ -19,6 +20,7 @@ function WeatherDaysForecast({ data }) {
 
 WeatherDaysForecast.propTypes = {
 	data: PropTypes.arrayOf(PropTypes.shape({
+		dt: PropTypes.number.isRequired,
 		day: PropTypes.string.isRequired,
 		maxTemperature: PropTypes.number.isRequired,
 		minTemperature: PropTypes.number.isRequired,
