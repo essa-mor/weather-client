@@ -5,16 +5,16 @@ exports[`WeatherDaysForecast test renders correctly 1`] = `
   className="weather_days_forecast"
 >
   <div
-    className="weather_day_indicator weather_day_indicator_selected"
+    className="weather_day_indicator"
   >
     <span
       className="weather_day"
     >
-      Wed
+      Thu
     </span>
     <img
       alt=""
-      src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+      src="http://openweathermap.org/img/w/01d.png"
     />
     <div
       className="weather_temperatures"
@@ -22,13 +22,13 @@ exports[`WeatherDaysForecast test renders correctly 1`] = `
       <span
         className="weather_max_temperature"
       >
-        31
+        29
         °
       </span>
       <span
         className="weather_min_temperature"
       >
-        25
+        28
         °
       </span>
     </div>
@@ -39,11 +39,11 @@ exports[`WeatherDaysForecast test renders correctly 1`] = `
     <span
       className="weather_day"
     >
-      Wed
+      Fri
     </span>
     <img
       alt=""
-      src="https://ssl.gstatic.com/onebox/weather/48/sunny.png"
+      src="http://openweathermap.org/img/w/01d.png"
     />
     <div
       className="weather_temperatures"
@@ -51,13 +51,13 @@ exports[`WeatherDaysForecast test renders correctly 1`] = `
       <span
         className="weather_max_temperature"
       >
-        31
+        27
         °
       </span>
       <span
         className="weather_min_temperature"
       >
-        25
+        27
         °
       </span>
     </div>
@@ -68,11 +68,11 @@ exports[`WeatherDaysForecast test renders correctly 1`] = `
     <span
       className="weather_day"
     >
-      Wed
+      Sat
     </span>
     <img
       alt=""
-      src="https://ssl.gstatic.com/onebox/weather/48/rain.png"
+      src="http://openweathermap.org/img/w/01d.png"
     />
     <div
       className="weather_temperatures"
@@ -80,13 +80,13 @@ exports[`WeatherDaysForecast test renders correctly 1`] = `
       <span
         className="weather_max_temperature"
       >
-        31
+        27
         °
       </span>
       <span
         className="weather_min_temperature"
       >
-        25
+        27
         °
       </span>
     </div>
@@ -97,11 +97,11 @@ exports[`WeatherDaysForecast test renders correctly 1`] = `
     <span
       className="weather_day"
     >
-      Wed
+      Sun
     </span>
     <img
       alt=""
-      src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
+      src="http://openweathermap.org/img/w/02d.png"
     />
     <div
       className="weather_temperatures"
@@ -109,13 +109,13 @@ exports[`WeatherDaysForecast test renders correctly 1`] = `
       <span
         className="weather_max_temperature"
       >
-        31
+        27
         °
       </span>
       <span
         className="weather_min_temperature"
       >
-        25
+        27
         °
       </span>
     </div>
@@ -126,11 +126,11 @@ exports[`WeatherDaysForecast test renders correctly 1`] = `
     <span
       className="weather_day"
     >
-      Wed
+      Mon
     </span>
     <img
       alt=""
-      src="https://ssl.gstatic.com/onebox/weather/48/thunderstorms.png"
+      src="http://openweathermap.org/img/w/03d.png"
     />
     <div
       className="weather_temperatures"
@@ -138,100 +138,13 @@ exports[`WeatherDaysForecast test renders correctly 1`] = `
       <span
         className="weather_max_temperature"
       >
-        31
+        27
         °
       </span>
       <span
         className="weather_min_temperature"
       >
-        25
-        °
-      </span>
-    </div>
-  </div>
-  <div
-    className="weather_day_indicator"
-  >
-    <span
-      className="weather_day"
-    >
-      Wed
-    </span>
-    <img
-      alt=""
-      src="https://ssl.gstatic.com/onebox/weather/48/sunny_s_cloudy.png"
-    />
-    <div
-      className="weather_temperatures"
-    >
-      <span
-        className="weather_max_temperature"
-      >
-        31
-        °
-      </span>
-      <span
-        className="weather_min_temperature"
-      >
-        25
-        °
-      </span>
-    </div>
-  </div>
-  <div
-    className="weather_day_indicator"
-  >
-    <span
-      className="weather_day"
-    >
-      Wed
-    </span>
-    <img
-      alt=""
-      src="https://ssl.gstatic.com/onebox/weather/48/rain_light.png"
-    />
-    <div
-      className="weather_temperatures"
-    >
-      <span
-        className="weather_max_temperature"
-      >
-        31
-        °
-      </span>
-      <span
-        className="weather_min_temperature"
-      >
-        25
-        °
-      </span>
-    </div>
-  </div>
-  <div
-    className="weather_day_indicator"
-  >
-    <span
-      className="weather_day"
-    >
-      Wed
-    </span>
-    <img
-      alt=""
-      src="https://ssl.gstatic.com/onebox/weather/48/sunny_s_rain.png"
-    />
-    <div
-      className="weather_temperatures"
-    >
-      <span
-        className="weather_max_temperature"
-      >
-        31
-        °
-      </span>
-      <span
-        className="weather_min_temperature"
-      >
-        25
+        27
         °
       </span>
     </div>

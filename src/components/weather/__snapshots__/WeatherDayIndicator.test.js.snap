@@ -7,7 +7,7 @@ exports[`WeatherDayIndicator test renders correctly - selected 1`] = `
   <span
     className="weather_day"
   >
-    Wen
+    Fri
   </span>
   <img
     alt=""
@@ -39,7 +39,7 @@ exports[`WeatherDayIndicator test renders correctly 1`] = `
   <span
     className="weather_day"
   >
-    Wen
+    Thu
   </span>
   <img
     alt=""
