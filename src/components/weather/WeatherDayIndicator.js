@@ -5,9 +5,15 @@ import dateFormat from 'dateformat';
 
 import './WeatherDayIndicator.css';
 
-function WeatherDayIndicator({ isSelected, day, img, maxTemperature, minTemperature }) {
+function handleOnClick(callBack, dt){
+	 if(callBack != null){
+		 callBack(dt);
+	 }
+}
+
+function WeatherDayIndicator({ onClick, isSelected, dt, day, img, maxTemperature, minTemperature }) {
 	const cls = classNames('weather_day_indicator', { 'weather_day_indicator_selected': isSelected });
-	return (<div className={cls}>
+	return (<div className={cls} onClick={handleOnClick.bind(this, onClick, dt)}>
 		<span className="weather_day">{dateFormat(new Date(day), 'ddd')}</span>
 		<img src={img} alt="" />
 		<div className="weather_temperatures">
@@ -18,6 +24,7 @@ function WeatherDayIndicator({ isSelected, day, img, maxTemperature, minTemperat
 }
 
 WeatherDayIndicator.propTypes = {
+	onClick: PropTypes.func,
 	isSelected: PropTypes.bool,
 	dt: PropTypes.number.isRequired,
 	day: PropTypes.string.isRequired,
