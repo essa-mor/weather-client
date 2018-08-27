@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import WeatherDaysForecast from './WeatherDaysForecast';
 import { getWeatherDays } from './WeatherDaysApi';
 
-export class WeatherDaysForecastContainer extends React.Component {
+export class WeatherDaysForecastContainer extends React.PureComponent {
 	constructor(props) {
 		super(props);
 		this.state = { data: [], selectedDt: null };
