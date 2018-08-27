@@ -9,7 +9,7 @@ class App extends Component {
 		return (
 			<Router>
 				<React.Fragment>
-					<WeatherDaysForecastContainer onChange={() => console.log('change url')}/>
+					<WeatherDaysForecastContainer/>
 					<Route path="/:dt" component={WeatherChartContainer} /> 
 				</React.Fragment>
 			</Router>

@@ -21,9 +21,22 @@ class WeatherDaysForecast extends React.Component {
 		}
 	}
 
+	componentDidMount() {
+		const { selectedDt } = this.props;
+		this.setState({ selectedDt });
+	}
+
+	componentDidUpdate(){
+		const { selectedDt } = this.props;
+		if(this.state.selectedDt == null && selectedDt != null){
+			this.setState({ selectedDt });
+		}
+	}
+
 	render() {
 		const { data } = this.props;
 		const { selectedDt } = this.state;
+
 		const weatherDayIndicators = data.map(({ dt, day, img, maxTemperature, minTemperature }) => (<WeatherDayIndicator
 			isSelected={selectedDt === dt}
 			onClick={this.handleOnChange}
@@ -48,7 +61,8 @@ WeatherDaysForecast.propTypes = {
 		maxTemperature: PropTypes.number.isRequired,
 		minTemperature: PropTypes.number.isRequired,
 		img: PropTypes.string.isRequired
-	})).isRequired
+	})).isRequired,
+	selectedDt: PropTypes.number
 };
 
 export default WeatherDaysForecast;

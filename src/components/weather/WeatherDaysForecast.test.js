@@ -28,4 +28,20 @@ describe('WeatherDaysForecast test', () => {
 		expect(wrapper.find('.weather_day_indicator_selected .weather_max_temperature').text()).toBe('34°');
 		expect(callback).toHaveBeenLastCalledWith(1535278000);
 	});
+
+	it('initilize selectedDt', () => {
+		const tree = renderer.create(<WeatherDaysForecast data={data} selectedDt={1535275000} />).toJSON();
+		expect(tree).toMatchSnapshot();
+	});
+
+	it('changing selectedDt prop doesn\'t change state', () => {
+		const wrapper = mount(<WeatherDaysForecast data={data}  selectedDt={1535275000}/>);
+		wrapper.find('.weather_day_indicator').first().simulate('click');
+		wrapper.update();
+		expect(wrapper.state().selectedDt).toBe(1535274000);
+		wrapper.setProps({ selectedDt: 1535278000 });
+		expect(wrapper.props().selectedDt).toBe(1535278000);
+		expect(wrapper.state().selectedDt).toBe(1535274000);
+		
+	});
 });
