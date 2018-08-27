@@ -1,7 +1,7 @@
 import React from 'react';
 
-function WeatherChart({dt}) {
-	return <div>Chart {dt}</div>;
+function WeatherChart({data}) {
+	return <div>Chart {data.length}</div>;
 }
 
 export default WeatherChart;
