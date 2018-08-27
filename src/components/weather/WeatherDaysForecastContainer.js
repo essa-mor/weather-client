@@ -1,28 +1,34 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 import WeatherDaysForecast from './WeatherDaysForecast';
 import { getWeatherDays } from './WeatherDaysApi';
 
-class WeatherDaysForecastContainer extends React.Component {
+export class WeatherDaysForecastContainer extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { data: [] };
+		this.state = { data: [], selectedDt: null };
+		this.handleOnChange = this.handleOnChange.bind(this);
+	}
+
+	handleOnChange(dt) {
+		const { history } = this.props;
+		history.push(`/${dt}`);
 	}
 
 	componentDidMount() {
+		const { location } = this.props;
 		getWeatherDays().then(data => this.setState({ data }));
+		const params = location && location.pathname.split('/').filter(i => i !== '');
+		if (params != null && params.length > 0) {
+			this.setState({ selectedDt: parseInt(params[0]) });
+		}
 	}
 
 	render() {
-		const { data } = this.state;
-		const { onChange } = this.props;
-		return <WeatherDaysForecast onChange={onChange} data={data} />;
+		const { data, selectedDt } = this.state;
+		return <WeatherDaysForecast onChange={this.handleOnChange} data={data} selectedDt={selectedDt} />;
 	}
 }
 
-WeatherDaysForecastContainer.propTypes ={
-	onChange: PropTypes.func
-};
-
-export default WeatherDaysForecastContainer;
+export default withRouter(WeatherDaysForecastContainer);

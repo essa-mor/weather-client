@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import WeatherDaysForecastContainer from './WeatherDaysForecastContainer';
+import { WeatherDaysForecastContainer } from './WeatherDaysForecastContainer';
 import { getWeatherDays } from './WeatherDaysApi';
 
 const data = [
@@ -18,7 +18,7 @@ describe('WeatherDaysForecastContainer test', () => {
 	it('renders correctly', done => {
 		getWeatherDays.mockImplementation(() => Promise.resolve(data));
 		wrapper = mount(<WeatherDaysForecastContainer />);
-		setTimeout(() => { 
+		setTimeout(() => {
 			wrapper.update();
 			expect(wrapper.find('.weather_day_indicator')).toHaveLength(5);
 			done();
