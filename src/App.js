@@ -9,8 +9,8 @@ class App extends Component {
 		return (
 			<Router>
 				<React.Fragment>
-					<WeatherDaysForecastContainer/>
 					<Route path="/:dt" component={WeatherChartContainer} /> 
+					<WeatherDaysForecastContainer/>
 				</React.Fragment>
 			</Router>
 		);
