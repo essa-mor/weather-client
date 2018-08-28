@@ -17,7 +17,7 @@ export function extractDayWeather(data, dt) {
 	for (let i = firstIndex; i < list.length && result.length < 8; i++) {
 		const { dt_txt , dt } = list[i];
 		const { temp } = list[i].main;
-		result.push({ dt, day: dt_txt, temp });
+		result.push({ dt, dt_txt, temp });
 	}
 	return result;
 }
