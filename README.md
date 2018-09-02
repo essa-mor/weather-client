@@ -1,4 +1,6 @@
-[Demo](https://issa-mour.github.io/weather-client)
+[Click Here For Demo](https://issa-mour.github.io/weather-client)
+
+![screenshot](https://user-images.githubusercontent.com/38791976/44955802-299f6300-aec2-11e8-8879-4765321267b1.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
