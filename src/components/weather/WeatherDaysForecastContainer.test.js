@@ -1,5 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import toJson from 'enzyme-to-json';
 
 import { WeatherDaysForecastContainer } from './WeatherDaysForecastContainer';
 import { getWeatherDays } from './WeatherDaysApi';
@@ -9,6 +10,14 @@ jest.mock('./WeatherDaysApi');
 
 let wrapper;
 describe('WeatherDaysForecastContainer test', () => {
+	it('renders correctly - render all', async () => {
+		getWeatherDays.mockImplementation(() => Promise.resolve(data));
+		const tree = mount(<WeatherDaysForecastContainer history={[]} />);
+		await tree.instance().componentDidMount();
+		tree.update();
+		expect(toJson(tree)).toMatchSnapshot();
+	});
+
 	it('renders correctly', done => {
 		getWeatherDays.mockImplementation(() => Promise.resolve(data));
 		wrapper = mount(<WeatherDaysForecastContainer history={[]} />);
