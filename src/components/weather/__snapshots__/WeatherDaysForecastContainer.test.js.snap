@@ -1,0 +1,265 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherDaysForecastContainer test renders correctly - render all 1`] = `
+<WeatherDaysForecastContainer
+  history={
+    Array [
+      "/weather-client/1535274000",
+    ]
+  }
+>
+  <WeatherDaysForecast
+    data={
+      Array [
+        Object {
+          "day": "2018-08-23 12:00:00",
+          "dt": 1535274000,
+          "img": "01d",
+          "maxTemperature": 29.39,
+          "minTemperature": 27.66,
+        },
+        Object {
+          "day": "2018-08-24 12:00:01",
+          "dt": 1535275000,
+          "img": "01d",
+          "maxTemperature": 30.39,
+          "minTemperature": 27.14,
+        },
+        Object {
+          "day": "2018-08-25 12:00:02",
+          "dt": 1535276000,
+          "img": "01d",
+          "maxTemperature": 31.39,
+          "minTemperature": 26.95,
+        },
+        Object {
+          "day": "2018-08-26 12:00:03",
+          "dt": 1535277000,
+          "img": "02d",
+          "maxTemperature": 32.39,
+          "minTemperature": 27.01,
+        },
+        Object {
+          "day": "2018-08-27 12:00:04",
+          "dt": 1535278000,
+          "img": "03d",
+          "maxTemperature": 33.69,
+          "minTemperature": 26.9,
+        },
+      ]
+    }
+    onChange={[Function]}
+    selectedDt={1535274000}
+  >
+    <div
+      className="weather_days_forecast"
+    >
+      <WeatherDayIndicator
+        day="2018-08-23 12:00:00"
+        dt={1535274000}
+        img="http://openweathermap.org/img/w/01d.png"
+        isSelected={true}
+        key="2018-08-23 12:00:00"
+        maxTemperature={29.39}
+        minTemperature={27.66}
+        onClick={[Function]}
+      >
+        <div
+          className="weather_day_indicator weather_day_indicator_selected"
+          onClick={[Function]}
+        >
+          <span
+            className="weather_day"
+          >
+            Thu
+          </span>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/w/01d.png"
+          />
+          <div
+            className="weather_temperatures"
+          >
+            <span
+              className="weather_max_temperature"
+            >
+              29
+              °
+            </span>
+            <span
+              className="weather_min_temperature"
+            >
+              28
+              °
+            </span>
+          </div>
+        </div>
+      </WeatherDayIndicator>
+      <WeatherDayIndicator
+        day="2018-08-24 12:00:01"
+        dt={1535275000}
+        img="http://openweathermap.org/img/w/01d.png"
+        isSelected={false}
+        key="2018-08-24 12:00:01"
+        maxTemperature={30.39}
+        minTemperature={27.14}
+        onClick={[Function]}
+      >
+        <div
+          className="weather_day_indicator"
+          onClick={[Function]}
+        >
+          <span
+            className="weather_day"
+          >
+            Fri
+          </span>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/w/01d.png"
+          />
+          <div
+            className="weather_temperatures"
+          >
+            <span
+              className="weather_max_temperature"
+            >
+              30
+              °
+            </span>
+            <span
+              className="weather_min_temperature"
+            >
+              27
+              °
+            </span>
+          </div>
+        </div>
+      </WeatherDayIndicator>
+      <WeatherDayIndicator
+        day="2018-08-25 12:00:02"
+        dt={1535276000}
+        img="http://openweathermap.org/img/w/01d.png"
+        isSelected={false}
+        key="2018-08-25 12:00:02"
+        maxTemperature={31.39}
+        minTemperature={26.95}
+        onClick={[Function]}
+      >
+        <div
+          className="weather_day_indicator"
+          onClick={[Function]}
+        >
+          <span
+            className="weather_day"
+          >
+            Sat
+          </span>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/w/01d.png"
+          />
+          <div
+            className="weather_temperatures"
+          >
+            <span
+              className="weather_max_temperature"
+            >
+              31
+              °
+            </span>
+            <span
+              className="weather_min_temperature"
+            >
+              27
+              °
+            </span>
+          </div>
+        </div>
+      </WeatherDayIndicator>
+      <WeatherDayIndicator
+        day="2018-08-26 12:00:03"
+        dt={1535277000}
+        img="http://openweathermap.org/img/w/02d.png"
+        isSelected={false}
+        key="2018-08-26 12:00:03"
+        maxTemperature={32.39}
+        minTemperature={27.01}
+        onClick={[Function]}
+      >
+        <div
+          className="weather_day_indicator"
+          onClick={[Function]}
+        >
+          <span
+            className="weather_day"
+          >
+            Sun
+          </span>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/w/02d.png"
+          />
+          <div
+            className="weather_temperatures"
+          >
+            <span
+              className="weather_max_temperature"
+            >
+              32
+              °
+            </span>
+            <span
+              className="weather_min_temperature"
+            >
+              27
+              °
+            </span>
+          </div>
+        </div>
+      </WeatherDayIndicator>
+      <WeatherDayIndicator
+        day="2018-08-27 12:00:04"
+        dt={1535278000}
+        img="http://openweathermap.org/img/w/03d.png"
+        isSelected={false}
+        key="2018-08-27 12:00:04"
+        maxTemperature={33.69}
+        minTemperature={26.9}
+        onClick={[Function]}
+      >
+        <div
+          className="weather_day_indicator"
+          onClick={[Function]}
+        >
+          <span
+            className="weather_day"
+          >
+            Mon
+          </span>
+          <img
+            alt=""
+            src="http://openweathermap.org/img/w/03d.png"
+          />
+          <div
+            className="weather_temperatures"
+          >
+            <span
+              className="weather_max_temperature"
+            >
+              34
+              °
+            </span>
+            <span
+              className="weather_min_temperature"
+            >
+              27
+              °
+            </span>
+          </div>
+        </div>
+      </WeatherDayIndicator>
+    </div>
+  </WeatherDaysForecast>
+</WeatherDaysForecastContainer>
+`;
