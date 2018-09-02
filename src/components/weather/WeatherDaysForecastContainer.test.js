@@ -19,23 +19,17 @@ describe('WeatherDaysForecastContainer test', () => {
 		});
 	});
 
-	it('Select first item', done => {
+	it('Select first item', async () => {
 		getWeatherDays.mockImplementation(() => Promise.resolve(data));
 		wrapper = mount(<WeatherDaysForecastContainer history={[]} />);
-		setTimeout(() => {
-			wrapper.update();
-			expect(wrapper.state().selectedDt).toBe(1535274000);
-			done();
-		});
+		await wrapper.instance().componentDidMount();
+		wrapper.update();
+		expect(wrapper.state().selectedDt).toBe(1535274000);
 	});
 
-	it('Select from history', done => {
+	it('Select from history', () => {
 		getWeatherDays.mockImplementation(() => Promise.resolve(data));
 		wrapper = mount(<WeatherDaysForecastContainer history={[]} location={{ pathname: '1535275000' }} />);
-		setTimeout(() => {
-			wrapper.update();
-			expect(wrapper.state().selectedDt).toBe(1535275000);
-			done();
-		});
+		expect(wrapper.state().selectedDt).toBe(1535275000);
 	});
 });
