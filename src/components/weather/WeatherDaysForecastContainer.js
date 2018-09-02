@@ -13,12 +13,21 @@ export class WeatherDaysForecastContainer extends React.PureComponent {
 
 	handleOnChange(dt) {
 		const { history } = this.props;
+		this.setState({ selectedDt: dt });
 		history.push(`/${dt}`);
+	}
+
+	updateData(data){
+		const { selectedDt } = this.state;
+		this.setState({ data });
+		if(selectedDt == null && data.length > 0){
+			this.handleOnChange(data[0].dt);
+		}
 	}
 
 	componentDidMount() {
 		const { location } = this.props;
-		getWeatherDays().then(data => this.setState({ data }));
+		getWeatherDays().then(data => this.updateData(data));
 		const params = location && location.pathname.split('/').filter(i => i !== '');
 		if (params != null && params.length > 0) {
 			this.setState({ selectedDt: parseInt(params[0]) });
