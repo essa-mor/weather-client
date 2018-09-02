@@ -10,7 +10,7 @@ class WeatherChartContainer extends React.PureComponent {
 
 	fetchData(){
 		const { match: { params: { dt } } } = this.props;
-		if(dt !== this.state.dt){
+		if(dt !== this.state.dt && !isNaN(dt)){
 			getWeatherDay(dt).then(data => this.setState({ data, dt }));
 		}
 	}

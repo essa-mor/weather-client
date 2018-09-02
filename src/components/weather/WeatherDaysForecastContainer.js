@@ -29,7 +29,7 @@ export class WeatherDaysForecastContainer extends React.PureComponent {
 		const { location } = this.props;
 		getWeatherDays().then(data => this.updateData(data));
 		const params = location && location.pathname.split('/').filter(i => i !== '');
-		if (params != null && params.length > 0) {
+		if (params != null && params.length > 0 && !isNaN(params[0])) {
 			this.setState({ selectedDt: parseInt(params[0]) });
 		}
 	}
