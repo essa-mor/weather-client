@@ -14,7 +14,7 @@ export class WeatherDaysForecastContainer extends React.PureComponent {
 	handleOnChange(dt) {
 		const { history } = this.props;
 		this.setState({ selectedDt: dt });
-		history.push(`/${dt}`);
+		history.push(`/weather-client/${dt}`);
 	}
 
 	updateData(data){
@@ -29,8 +29,8 @@ export class WeatherDaysForecastContainer extends React.PureComponent {
 		const { location } = this.props;
 		getWeatherDays().then(data => this.updateData(data));
 		const params = location && location.pathname.split('/').filter(i => i !== '');
-		if (params != null && params.length > 0 && !isNaN(params[0])) {
-			this.setState({ selectedDt: parseInt(params[0]) });
+		if (params != null && params.length > 0 && !isNaN(params[params.length-1])) {
+			this.setState({ selectedDt: parseInt(params[params.length-1]) });
 		}
 	}
 
