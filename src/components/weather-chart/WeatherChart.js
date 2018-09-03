@@ -14,6 +14,8 @@ const labelsHeight = 30;
 class WeatherChart extends React.PureComponent {
 	componentDidUpdate() {
 		const path = select('#line');
+		if(path.node() == null) return;
+		console.log('componentDidUpdate');
 		var totalLength = path.node().getTotalLength();
 		const t = transition()
 			.duration(1000)
