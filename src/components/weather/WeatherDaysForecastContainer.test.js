@@ -10,7 +10,15 @@ jest.mock('./WeatherDaysApi');
 
 let wrapper;
 describe('WeatherDaysForecastContainer test', () => {
-	it('renders correctly - render all', async () => {
+	it('renders correctly - await promise resolve', async () => {
+		getWeatherDays.mockImplementation(() => Promise.resolve(data));
+		const tree = mount(<WeatherDaysForecastContainer history={[]} />);
+		await Promise.resolve();
+		tree.update();
+		expect(toJson(tree)).toMatchSnapshot();
+	});
+
+	it('renders correctly - call componentDidMount', async () => {
 		getWeatherDays.mockImplementation(() => Promise.resolve(data));
 		const tree = mount(<WeatherDaysForecastContainer history={[]} />);
 		await tree.instance().componentDidMount();
